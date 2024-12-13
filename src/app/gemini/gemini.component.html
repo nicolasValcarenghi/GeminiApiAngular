@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>API Gemini - Teste de Prompts</h1>
+    <input
+      type="text"
+      [(ngModel)]="prompt"
+      placeholder="Envie uma mensagem aqui"
+      class="prompt-input"
+    />
+    <button (click)="sendPrompt()" [disabled]="isLoading" class="send-button">
+      {{ isLoading ? 'Carregando...' : 'Enviar Prompt' }}
+    </button>
+  
+    <div *ngIf="response">
+      <p>{{ response }}</p>
+    </div>
+  </div>
+  
